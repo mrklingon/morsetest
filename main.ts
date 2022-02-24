@@ -8,6 +8,8 @@ input.touchD1.onEvent(ButtonEvent.Up, function () {
     if (vnum > 4) {
         vnum = 0
     }
+    encrypt(VNames[vnum])
+    strip.showAnimation(light.sparkleAnimation, 500)
 })
 function doDash () {
     pixel.setColor(0x0000ff)
@@ -167,7 +169,6 @@ function doSpace () {
     shift_strip()
 }
 let vn = ""
-let VNames: string[] = []
 let _2Tim316 = ""
 let Isaiah263 = ""
 let Phl4 = ""
@@ -180,6 +181,7 @@ let morse: string[] = []
 let code = ""
 let chr = ""
 let verses: string[] = []
+let VNames: string[] = []
 let vnum = 0
 let strip: light.NeoPixelStrip = null
 pixel.setColor(0xff0000)
@@ -188,3 +190,5 @@ pause(1000)
 pixel.setColor(0x000000)
 strip = light.createStrip(pins.A2, 30)
 vnum = 0
+encrypt(VNames[vnum])
+strip.showAnimation(light.sparkleAnimation, 500)
