@@ -5,8 +5,9 @@ input.touchD2.onEvent(ButtonEvent.Up, function () {
 input.touchD1.onEvent(ButtonEvent.Up, function () {
     strip.showAnimation(light.rainbowAnimation, 500)
     vnum += 1
-    if (vnum > 4) {
+    if (vnum > 5) {
         vnum = 0
+        strip.showAnimation(light.theaterChaseAnimation, 500)
     }
     encrypt(VNames[vnum])
     strip.showAnimation(light.sparkleAnimation, 500)
@@ -99,6 +100,7 @@ function doINIT () {
     "-----",
     " "
     ]
+    alpha = "abcdefghijklmnopqrstuvwxyz"
     j316 = "for god so loved the world"
     P23 = "the lord is my shepherd"
     Phl4 = "i can do all things"
@@ -109,14 +111,16 @@ function doINIT () {
     P23,
     j316,
     Isaiah263,
-    _2Tim316
+    _2Tim316,
+    alpha
     ]
     VNames = [
     "ph4",
     "p23",
     "j316",
     "i26",
-    "2tim"
+    "2tim",
+    "alpha"
     ]
     vn = ""
     alphabet = [
@@ -174,6 +178,7 @@ let Isaiah263 = ""
 let Phl4 = ""
 let P23 = ""
 let j316 = ""
+let alpha = ""
 let verse = ""
 let shft = 0
 let alphabet: string[] = []
@@ -188,7 +193,7 @@ pixel.setColor(0xff0000)
 doINIT()
 pause(1000)
 pixel.setColor(0x000000)
-strip = light.createStrip(pins.A2, 30)
-vnum = 0
+strip = light.createStrip(pins.A2, 24)
+vnum = 5
 encrypt(VNames[vnum])
 strip.showAnimation(light.sparkleAnimation, 500)

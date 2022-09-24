@@ -13,7 +13,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "0.15.58",
+        "target": "0.15.66",
         "targetId": "maker"
     },
     "supportedTargets": [
